@@ -1,0 +1,56 @@
+{
+  "scope": "In-memory Chromium component rendering of synthetic source. Managed browser policy blocked HTTP/file navigation; transport/CSP delivery was not verified. No browser policy was changed. Not a physical iPhone, VoiceOver test or private-product acceptance.",
+  "results": [
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "workflow": "pass",
+      "self_approval_denied": true,
+      "mosaic_completion_reset": "pass",
+      "reader_bounds": "pass",
+      "all_panels_no_horizontal_overflow": true,
+      "storage_check": "No storage APIs appear in runtime source; opaque-origin browser storage not queried"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "workflow": "pass",
+      "self_approval_denied": true,
+      "mosaic_completion_reset": "pass",
+      "reader_bounds": "pass",
+      "all_panels_no_horizontal_overflow": true,
+      "storage_check": "No storage APIs appear in runtime source; opaque-origin browser storage not queried"
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "workflow": "pass",
+      "self_approval_denied": true,
+      "mosaic_completion_reset": "pass",
+      "reader_bounds": "pass",
+      "all_panels_no_horizontal_overflow": true,
+      "storage_check": "No storage APIs appear in runtime source; opaque-origin browser storage not queried"
+    },
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "workflow": "pass",
+      "self_approval_denied": true,
+      "mosaic_completion_reset": "pass",
+      "reader_bounds": "pass",
+      "all_panels_no_horizontal_overflow": true,
+      "storage_check": "No storage APIs appear in runtime source; opaque-origin browser storage not queried"
+    }
+  ],
+  "browser_errors": [],
+  "external_requests": [],
+  "screenshots": "Owner-review candidates only; none approved for publication."
+}

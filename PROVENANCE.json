@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "clean-room synthetic educational showcase",
+  "created_for": "portfolio demonstration",
+  "implementation": "AI-assisted original example code",
+  "not_a_private_product_export": true,
+  "fixtures": [
+    {
+      "path": "site/core.js",
+      "type": "deterministic geometric mosaic and fictional work item",
+      "source": "created for this showcase"
+    },
+    {
+      "path": "site/app.js",
+      "type": "original fictional story and in-memory interactions",
+      "source": "created for this showcase"
+    },
+    {
+      "path": "site/styles.css",
+      "type": "original CSS geometry and layout",
+      "source": "created for this showcase"
+    }
+  ],
+  "third_party_assets": [],
+  "personal_media": [],
+  "screenshots_in_source_package": [],
+  "license": "not selected",
+  "owner_visual_acceptance": "pending"
+}

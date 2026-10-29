@@ -15,3 +15,7 @@ No deployment workflow or automatic publishing script is included. If a private 
 ## Current authorization
 
 The owner authorized publication of this dedicated staging repository and the reviewed synthetic source exports on October 28, 2026. All 24 final captures were separately approved and are recorded by exact hash. Six historical captures remain excluded. No hosted deployment or reuse license is included. See RELEASE.md.
+
+## Subsequent hosting authorization
+
+The owner subsequently authorized free live hosting for the showcase and synthetic demos. The dedicated repository now uses GitHub Pages; original family applications remain private and x402 PR #70 stays open. See [hosting configuration](HOSTING.md). Earlier no-hosting statements above describe the source-only publication milestone.

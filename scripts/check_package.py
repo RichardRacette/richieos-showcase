@@ -19,7 +19,7 @@ def scan_tree(root):
     if len(names)!=len(set(names)):issues.append('Duplicate allowlist entries')
     for name in names:
         q=PurePosixPath(name)
-        if q.is_absolute() or '..' in q.parts or '\\' in name or any(s.startswith('.') for s in q.parts):issues.append('Unsafe allowlist path')
+        if q.is_absolute() or '..' in q.parts or '\\' in name or (name!='.nojekyll' and any(s.startswith('.') for s in q.parts)):issues.append('Unsafe allowlist path')
     if issues:return issues
     actual={f.relative_to(root).as_posix() for f in root.rglob('*') if (f.is_file() or f.is_symlink()) and not any(d in IGNORED_DIRS for d in f.relative_to(root).parts)}
     expected=set(names)
@@ -36,6 +36,9 @@ def scan_tree(root):
         if not f.resolve().is_relative_to(root):issues.append('Path escapes package: '+name);continue
         if f.stat().st_size>500_000:issues.append('Oversize file: '+name);continue
         raw=f.read_bytes()
+        if name=='.nojekyll':
+            if raw:issues.append('Nonempty static hosting marker')
+            continue
         if f.suffix.lower() in {'.png','.jpg','.jpeg','.webp'}:
             a=approvals.get(name,{})
             if not (a.get('approved_by_owner') is True and a.get('approval_reference') and a.get('synthetic_only') is True and a.get('sha256')==hashlib.sha256(raw).hexdigest()):issues.append('Image lacks exact owner approval: '+name)
@@ -57,7 +60,7 @@ def scan_tree(root):
                         if key in {'href','src','style'} or re.search(r'url\s*\(|https?://|data:|javascript:',value,re.I):issues.append('SVG external or embedded reference: '+name)
                 if re.search(r'<!DOCTYPE|<!ENTITY',text,re.I):issues.append('SVG active entity declaration: '+name)
             except ET.ParseError:issues.append('Invalid SVG: '+name)
-        if name.startswith(('site/','demos/')) and f.suffix in {'.js','.mjs','.html','.css'}:
+        if (name.startswith(('site/','demos/')) or name in {'index.html','hosting.css'}) and f.suffix in {'.js','.mjs','.html','.css'}:
             runtime_text=re.sub(r'''xmlns=(["'])http://www.w3.org/2000/svg\1''','',text) if f.suffix=='.html' else text
             for pattern in [r'\bfetch\s*\(',r'\bXMLHttpRequest\b',r'\bWebSocket\s*\(',r'\bsendBeacon\s*\(',r'\blocalStorage\b',r'\bsessionStorage\b',r'\bindexedDB\b',r'https?://',r'@import\b']:
                 if re.search(pattern,runtime_text):issues.append('Disallowed runtime network/storage pattern: '+name)

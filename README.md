@@ -1,8 +1,12 @@
 # RichieOS — synthetic architecture showcase
 
-**Public source and approved synthetic screenshots; no hosted deployment.** Three clean-room educational examples and two source-adapted demonstrations make the work inspectable while the original applications remain private.
+**Public source, approved synthetic screenshots and a live GitHub Pages website.** Three clean-room educational examples and two source-adapted demonstrations make the work inspectable while the original applications remain private.
 
 ## Open it
+
+[Explore the live demonstrations](https://richardracette.github.io/richieos-showcase/) · [Showcase](https://richardracette.github.io/richieos-showcase/site/) · [Spectrum Study](https://richardracette.github.io/richieos-showcase/demos/puzzle/) · [Cloud Post](https://richardracette.github.io/richieos-showcase/demos/reader/)
+
+Hosting uses free GitHub Pages for this public repository. No custom domain, paid service or backend is required. See [hosting and rollback](docs/HOSTING.md).
 
 Use a local static server from this folder:
 
@@ -10,7 +14,7 @@ Use a local static server from this folder:
 python -m http.server --bind localhost 8000 --directory site
 ```
 
-Open the localhost page on port 8000. No installation, service credentials or build step is required. A current browser with JavaScript is needed. Stop the server when finished. No hosting has been configured.
+Open the localhost page on port 8000. No installation, service credentials or build step is required. A current browser with JavaScript is needed. Stop the server when finished. GitHub Pages serves the same static files.
 
 ## The three examples
 
@@ -51,6 +55,6 @@ These separate exports retain inspected first-party mechanics with fictional inp
 - [Spectrum Study](demos/puzzle/README.md): 20x20, eight-color geometric puzzle using the inspected selection/transfer engine, with simplified rendering and no photo conversion or persistent saves.
 - [Cloud Post](demos/reader/README.md): source-adapted reader, bookshelf and discoveries with an original brass-compass story and four geometric SVG scenes. Narration and music are absent; state stays in memory.
 
-From the repository root, run `python -m http.server --bind 127.0.0.1 8080` and visit `/site/`, `/demos/puzzle/` or `/demos/reader/` on that local server. Stop with Ctrl+C. No hosting or external services are configured.
+From the repository root, run `python -m http.server --bind 127.0.0.1 8080` and visit `/site/`, `/demos/puzzle/` or `/demos/reader/` on that local server. Stop with Ctrl+C. The hosted version serves these same static files through GitHub Pages; the apps have no external service integrations.
 
 The owner authorized these exact source exports for publication. No general reuse license has been selected. See each demonstration's provenance and notices, and the [publication record](docs/RELEASE.md).

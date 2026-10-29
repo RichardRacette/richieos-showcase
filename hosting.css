@@ -1,0 +1,5 @@
+.launch-link{display:inline-flex;align-items:center;justify-content:space-between;gap:16px;min-height:46px;padding:10px 16px;margin-top:20px;border-radius:9px;background:var(--accent);color:white;text-decoration:none;font-weight:650;font-size:14px}
+.launch-link:hover{background:#1d5141}
+.architecture{padding-bottom:36px}
+.architecture h2{font-size:31px}
+@media(max-width:720px){.launch-link{display:flex}.architecture{padding-bottom:24px}}

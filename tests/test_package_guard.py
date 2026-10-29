@@ -42,6 +42,22 @@ class PackageGuardTests(unittest.TestCase):
     def test_bad_allowlist_path_fails(self):
         with (self.root/'PUBLIC-FILES.txt').open('a') as f:f.write('../outside.txt\n')
         self.assertTrue(self.scan())
+    def test_empty_nojekyll_marker_is_allowed(self):
+        (self.root/'.nojekyll').write_text('')
+        with (self.root/'PUBLIC-FILES.txt').open('a') as f:f.write('.nojekyll\n')
+        self.assertEqual(self.scan(),[])
+    def test_nonempty_nojekyll_marker_is_rejected(self):
+        (self.root/'.nojekyll').write_text('unexpected content')
+        with (self.root/'PUBLIC-FILES.txt').open('a') as f:f.write('.nojekyll\n')
+        self.assertTrue(self.scan())
+    def test_other_hidden_files_are_still_rejected(self):
+        (self.root/'.unreviewed').write_text('hidden')
+        with (self.root/'PUBLIC-FILES.txt').open('a') as f:f.write('.unreviewed\n')
+        self.assertTrue(self.scan())
+    def test_root_landing_network_call_is_rejected(self):
+        (self.root/'index.html').write_text('<script>fetch("/upload")</script>')
+        with (self.root/'PUBLIC-FILES.txt').open('a') as f:f.write('index.html\n')
+        self.assertTrue(any('runtime network/storage' in e for e in self.scan()))
     def add_demo_file(self,name,text):
         p=self.root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
         with (self.root/'PUBLIC-FILES.txt').open('a') as f:f.write(name+'\n')

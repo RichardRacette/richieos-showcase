@@ -1,3 +1,4 @@
+.nojekyll
 LICENSE-STATUS.md
 PROVENANCE.json
 PUBLIC-FILES.txt
@@ -37,9 +38,12 @@ demos/reader/styles.css
 demos/reader/test.mjs
 docs/ARCHITECTURE.md
 docs/BROWSER-COMPONENT-RESULTS.json
+docs/HOSTING.md
 docs/PUBLICATION.md
 docs/RELEASE.md
 docs/VERIFICATION.md
+hosting.css
+index.html
 screenshots/README.md
 screenshots/family-puzzle-1440.png
 screenshots/family-puzzle-360.png

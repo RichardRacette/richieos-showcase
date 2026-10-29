@@ -2,7 +2,7 @@
 
 This is a demonstration adapted from inspected application source, with newly authored fictional inputs. It is not the original application, its media, or evidence of its acceptance. The owner authorized publication of this reviewed synthetic export on October 28, 2026. No open-source license is granted here.
 
-Run `python -m http.server --bind 127.0.0.1 8080` in this folder and open http://127.0.0.1:8080. Stop with Ctrl+C. No dependencies, accounts or build step. No hosted deployment.
+Run `python -m http.server --bind 127.0.0.1 8080` in this folder and open http://127.0.0.1:8080. Stop with Ctrl+C. No dependencies, accounts or build step. A live synthetic demonstration is available through the repository's GitHub Pages site.
 
 Preserved: source reader layout, bounded page navigation, keyboard navigation, contained image planes, loading-gated touch discoveries, retry/teardown and bookshelf flow. Replaced: every book, title, caption, alt text, identifier, illustration and media manifest. Audio is absent; all state uses an in-memory adapter. Omitted: original media, narration, music, persistence, installed-app behavior and device acceptance.
 

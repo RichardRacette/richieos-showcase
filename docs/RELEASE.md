@@ -5,3 +5,7 @@ Owner-authorized public source publication: owner-release-2026-10-28-01. The exa
 The clean-room examples in site/ remain distinct from the source-adapted synthetic exports under demos/. Runtime behavior and fictional assets match the reviewed exports; publication edits update documentation, provenance, package checks and the screenshot gallery. Text exports normalize line endings and trailing whitespace; one reader comment identifies the synthetic demo. No original application, personal media, private source mapping, operational report or original repository history is included.
 
 This publication does not grant a general reuse license, establish physical-device or original-product acceptance, or enable hosting. All demonstrations run locally with the commands in their READMEs. No release automation is configured.
+
+## Subsequent hosting authorization
+
+The owner subsequently authorized free live hosting for the showcase and synthetic demos. The dedicated repository now uses GitHub Pages; original family applications remain private and x402 PR #70 stays open. See [hosting configuration](HOSTING.md). Earlier no-hosting statements above describe the source-only publication milestone.

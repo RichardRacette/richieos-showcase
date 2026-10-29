@@ -34,7 +34,7 @@ Actual browser checks passed at 360×800, 390×844, 768×1024 and 1440×1000:
 
 Two defects were reproduced before correction: an absent favicon caused a 404 console error, and palette labels 6–8 had contrast ratios 4.31, 3.83 and 3.35. An explicit empty favicon and black labels correct those defects without changing the examples or CSP. The two delivery regressions fail against the original supplied source and pass against this revision.
 
-Screenshots, request logs, exact harnesses and file hashes are retained in a separate owner-only review pack. They are not approved publication media. SCREENSHOT-APPROVALS.json remains empty.
+Request logs, exact harnesses and original review evidence are retained in a separate owner-only pack. The owner subsequently approved the 24 final synthetic screenshot captures for publication; exact hashes are recorded in SCREENSHOT-APPROVALS.json. Physical-device and original-product acceptance remain separate.
 
 ## Historical component evidence
 
@@ -42,4 +42,10 @@ BROWSER-COMPONENT-RESULTS.json records the earlier editing environment's in-memo
 
 ## Still unverified
 
-Physical iPhone/Safari, VoiceOver, a complete accessibility audit, hosted deployment, independent security review, owner visual acceptance and exact screenshot approval. The examples have no narration or durable save feature. Role buttons simulate authority; they do not authenticate people. None of these results establishes acceptance of an original private product.
+Physical iPhone/Safari, VoiceOver, a complete accessibility audit, hosted deployment, independent security review and original-product acceptance. The examples have no narration or durable save feature. Role buttons simulate authority; they do not authenticate people. None of these results establishes acceptance of an original private product.
+
+## Publication packaging
+
+The approved family exports retain their six passing model tests and eight HTTP browser cases. The root package guard covers both demos and SVG assets as well as exact screenshot approval hashes. Runtime behavior and fictional asset content are unchanged; text line endings and trailing whitespace were normalized. No owner-only evidence files are included in the public tree.
+
+Publication verification: the combined Node command runs 22 tests (16 showcase plus six source-adapted demo tests), and Python runs 16 package-guard tests. All pass with zero skips. Syntax checks, explicit allowlist, local documentation links, exact image hashes and PNG metadata checks pass. The 24 approved captures are byte-identical to the reviewed images; publication makes no behavioral or visual asset changes.

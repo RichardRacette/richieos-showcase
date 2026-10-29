@@ -1,0 +1,1 @@
+Owner authorized publication of this reviewed synthetic adaptation on October 28, 2026. No LICENSE or NOTICE file was found in the inspected source subtrees or repository root; no general reuse rights or third-party clearance are asserted. No third-party package or media asset is included. System fonts are referenced, not distributed. Private source mappings are not published.

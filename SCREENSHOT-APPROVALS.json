@@ -1,4 +1,173 @@
 {
-  "policy": "Only exact, owner-approved, synthetic-only screenshots may be added. Do not infer approval from generation or automated review.",
-  "screenshots": []
+  "policy": "Only exact, owner-approved, synthetic-only screenshots may be added. Changed bytes require new approval.",
+  "screenshots": [
+    {
+      "path": "screenshots/family-puzzle-1440.png",
+      "sha256": "d1c030501aa9b171fe6d9caa90929cf55ce2b8d5f5291eb505c835fa3534a5ba",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-puzzle-360.png",
+      "sha256": "4eb2d877b8b9710527b122e27ce80d8193d39373e412a4f322ad4a4b1730f8b2",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-puzzle-390.png",
+      "sha256": "8d20fb226d470404685f23ee10bd269763d3971ce29975115be5784e74ade8f3",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-puzzle-768.png",
+      "sha256": "7c002a63d290ff93b75e0373f4a08a94d583cb34237bcfe3861b1270616936af",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-reader-1440.png",
+      "sha256": "c2010243c6678c1719ff9eded406158e53717ed140a1afc6c1095d5109b5bbb1",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-reader-360.png",
+      "sha256": "4b2e59a8471b0db74f2c3be80ca1106fa001187a4fc182b2374736283ab7cc24",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-reader-390.png",
+      "sha256": "c89d169f3adb928c5adef3ffad18c71521b8fe02e4ced4285ee6c33f97d0b9f6",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-reader-768.png",
+      "sha256": "2f7b736f70219a8328c132184beb0b5fb320154b5e32b68a7e69c2134f18db93",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-reader-ending-1440.png",
+      "sha256": "2d82dd58932e84b1ce7105122e1fed2290f5a0938f9af24e1564dc31c4a0425d",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-reader-ending-360.png",
+      "sha256": "57529156c57c0cd1248cada8d41e4f9a1bd2d84c3467935ca117917ed9674be6",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-reader-ending-390.png",
+      "sha256": "6da517e0fa1dc8cd5ce82b89381d45adca0a38af4390343863e9872581a7056f",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/family-reader-ending-768.png",
+      "sha256": "3a07683e05bc2765f362ca735aac81d38ea09c344620f4de31f525df9802d44c",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-coordination-1440.png",
+      "sha256": "1baf4b6c1fe3bae3b694140dec24d6e25f8aefc058b9a72a9801da242ed3b860",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-coordination-360.png",
+      "sha256": "d367b9a3ffe926a3375dd87c3a742ec7132d682c433b9a0c90cb194c4d0b3527",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-coordination-390.png",
+      "sha256": "f48745311459c88028470e69adc108cff57c62b34304edf4343c6b04a564073e",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-coordination-768.png",
+      "sha256": "3fe7e5d6eaf536236490662650e284720f466b5d076bea621618c31aa0a03ff5",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-mosaic-1440.png",
+      "sha256": "678cb4a9e4540174b64890e60919945ec801c7629afbbcbb554038d95f41e192",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-mosaic-360.png",
+      "sha256": "620f9b6d44c06739f130ec28a0357d3d4b22ff967d91d7b44a7ce0c285141c61",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-mosaic-390.png",
+      "sha256": "f5acabdf83b43e6287ae0d07c0b7236079547970b432e2ba0dd1e59ffd0ef61c",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-mosaic-768.png",
+      "sha256": "30861954e6c379a5bca1ca564cf8765530dce9e211868a778754eb0d33e39db0",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-reader-1440.png",
+      "sha256": "d669306204a715bf4deb399ae28543dcd94a48d7aee45dfb786a2bcbd432701e",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-reader-360.png",
+      "sha256": "14b517978a5edd32fe9d96ee496a7f879b292fc9eaef36e42f49eb1a108bd71d",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-reader-390.png",
+      "sha256": "e4b059dee120450bdb50dfa739d79d52d1cf16a0f9c679b0d2bf1c6acb147b95",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    },
+    {
+      "path": "screenshots/final-reader-768.png",
+      "sha256": "fef777bd3249aac75869cd1da7ed4002ab4308fbdca6eb106146f9b119362e99",
+      "synthetic_only": true,
+      "approved_by_owner": true,
+      "approval_reference": "owner-screenshots-2026-10-28-02"
+    }
+  ]
 }

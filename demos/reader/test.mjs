@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {books} from './story.mjs';import {normalizeProgress,rememberPage,openingPage} from './library.mjs';import {containedRect} from './scene-image.mjs';
+test('fictional collection has four silent pages and eight discoveries',()=>{assert.equal(books.length,1);assert.equal(books[0].id,'cloud-post');assert.equal(books[0].pages.length,4);assert(books[0].pages.every(p=>p.hotspots.length===2&&p.narration===''))});
+test('reader bounds and completed-book restart',()=>{const b=books[0],p=normalizeProgress({'cloud-post':{page:999}},books);assert.equal(openingPage(p,b),3);rememberPage(p,b,3,true);assert.equal(openingPage(p,b),0);rememberPage(p,b,-99);assert.equal(p[b.id].page,0)});
+test('image planes remain contained and preserve aspect at four viewports',()=>{for(const [w,h]of[[360,800],[390,844],[768,1024],[1440,1000]]){const r=containedRect(w,h,600,800);assert(r.left>=0&&r.top>=0&&r.width<=w&&r.height<=h);assert(Math.abs(r.width/r.height-.75)<1e-9)}});

@@ -11,3 +11,7 @@ The source package and screenshot review pack are different artifacts. Publish o
 7. Public visibility and any hosted deployment are explicit release actions. Do not change any existing repository's visibility, enable a hosting integration, spend money or bypass acceptance gates to finish this checklist.
 
 No deployment workflow or automatic publishing script is included. If a private staging repository is created, its privacy does not establish anything about a separate hosting service. Review hosting separately before ever enabling it.
+
+## Current authorization
+
+The owner authorized publication of this dedicated staging repository and the reviewed synthetic source exports on October 28, 2026. All 24 final captures were separately approved and are recorded by exact hash. Six historical captures remain excluded. No hosted deployment or reuse license is included. See RELEASE.md.

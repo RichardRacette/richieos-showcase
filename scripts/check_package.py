@@ -1,8 +1,9 @@
 """Conservative artifact checks, not a privacy/security certification."""
 from pathlib import Path, PurePosixPath
 import argparse, hashlib, json, re, sys
+import xml.etree.ElementTree as ET
 IGNORED_DIRS={'.git','__pycache__','.pytest_cache'}
-TEXT_EXT={'.md','.txt','.json','.html','.css','.js','.cjs','.py'}
+TEXT_EXT={'.md','.txt','.json','.html','.css','.js','.cjs','.py','.mjs','.svg'}
 PATTERNS={
     'credential-like token':r'\b(?:ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|sk-[A-Za-z0-9_-]{24,})\b',
     'private key header':r'-----BEGIN [A-Z ]*PRIVATE KEY-----',
@@ -44,9 +45,22 @@ def scan_tree(root):
         except UnicodeError:issues.append('Binary file forbidden: '+name);continue
         for label,pattern in PATTERNS.items():
             if re.search(pattern,text):issues.append(label+': '+name)
-        if name.startswith('site/') and f.suffix in {'.js','.html','.css'}:
+        if f.suffix.lower()=='.svg':
+            try:
+                svg=ET.fromstring(text)
+                allowed={'svg','g','path','rect','circle','ellipse','polygon','polyline','line','title','desc'}
+                for element in svg.iter():
+                    if element.tag.split('}')[-1] not in allowed:issues.append('SVG active or unsupported element: '+name)
+                    for key,value in element.attrib.items():
+                        key=key.split('}')[-1].lower()
+                        if key.startswith('on'):issues.append('SVG active event handler: '+name)
+                        if key in {'href','src','style'} or re.search(r'url\s*\(|https?://|data:|javascript:',value,re.I):issues.append('SVG external or embedded reference: '+name)
+                if re.search(r'<!DOCTYPE|<!ENTITY',text,re.I):issues.append('SVG active entity declaration: '+name)
+            except ET.ParseError:issues.append('Invalid SVG: '+name)
+        if name.startswith(('site/','demos/')) and f.suffix in {'.js','.mjs','.html','.css'}:
+            runtime_text=re.sub(r'''xmlns=(["'])http://www.w3.org/2000/svg\1''','',text) if f.suffix=='.html' else text
             for pattern in [r'\bfetch\s*\(',r'\bXMLHttpRequest\b',r'\bWebSocket\s*\(',r'\bsendBeacon\s*\(',r'\blocalStorage\b',r'\bsessionStorage\b',r'\bindexedDB\b',r'https?://',r'@import\b']:
-                if re.search(pattern,text):issues.append('Disallowed runtime network/storage pattern: '+name)
+                if re.search(pattern,runtime_text):issues.append('Disallowed runtime network/storage pattern: '+name)
     return issues
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('root',nargs='?',default=str(Path(__file__).resolve().parents[1]));args=parser.parse_args()

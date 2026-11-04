@@ -1,4 +1,5 @@
 .nojekyll
+CLAUDE.md
 LICENSE-STATUS.md
 PROVENANCE.json
 PUBLIC-FILES.txt
